@@ -22,7 +22,7 @@
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-5 col-xl-3">
                     <div id="error-user-not-found" class="alert alert-danger d-none" role="alert">
-                        Der E-Mail Passwort kombination wurde nicht gefunden
+                        Die E-Mail Passwort kombination wurde nicht gefunden
                     </div>
 
                     <div id="error-missing-e-mail" class="alert alert-danger d-none" role="alert">
@@ -31,6 +31,10 @@
 
                     <div id="error-missing-password" class="alert alert-danger d-none" role="alert">
                         Bitte geben sie ihr Passwort ein
+                    </div>
+
+                    <div id="serverError" class="alert alert-danger d-none" role="alert">
+                        Der Server konnte keine verbindung herstellen.
                     </div>
 
                 </div>
@@ -46,9 +50,6 @@
                       <div class="form-floating">
                         <input type="passwort" class="form-control" id="passwortInput" placeholder="Passwort">
                         <label for="passwortInput">Passwort</label>
-                      </div>
-                      <div class="checkbox mb-3">
-                        <a href="registrierung.html">Konto Erstellen</a>
                       </div>
                       <button id="loginSubmitButton" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
                 </div>

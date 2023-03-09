@@ -10,9 +10,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($values['username']) && isset
     //Überprüfen pw && nutzername vorhanden
 
     //Datenbank check nutzer mit pw && nutzername
-    //$dbh = new PDO('mysql:host=localhost;dbname=lani_website', "lani_website", "Lani_webseite2023#");
-    $user = array('id' => '1', 'username' => 'lani'); //|| null
-    //$user = null;
+    //Verbindungsfehler
+    $user = null;
+    try {
+        $dbh = new PDO('mysql:host=localhost:3306;dbname=lani_webseite', "lani_webseite", "Lani_webseite2023#");
+
+        $sql = "SELECT id, email, passwort FROM lani_webseite.user WHERE email LIKE :name AND passwort LIKE :passwort LIMIT 1";
+        $sth = $dbh->prepare($sql);
+        $sth->execute(['name' => $name, 'passwort' => $passwort]);
+
+        //' OR 1 = 1 LIMIT 1 #'
+
+        $user = $sth->fetch(PDO::FETCH_ASSOC);
+
+        $dbh = null;
+     } catch (PDOException $e) {
+        echo json_encode($e->getMessage());
+        http_response_code(500);
+        die();
+     }
+
 
     //Fall 1: ist vorhanden
     //Fall 2: nicht vorhanden

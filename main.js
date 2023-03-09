@@ -36,6 +36,9 @@ async function submitLogin(username, password){
     let userNotFound = document.getElementById("error-user-not-found");
     userNotFound.classList.add("d-none");
 
+    let serverError = document.getElementById("serverError");
+    serverError.classList.add("d-none");
+
 
     if(!username || String(username).length <= 0){
         missingEmail.classList.remove("d-none");
@@ -57,17 +60,22 @@ async function submitLogin(username, password){
 
     console.log(response.status);
 
-    let res = await response.json();
-    console.log(res);
-   
     //Status überprüfung der Antwort ob 200 oder 404
     //Bei 200 weiterleitung Mitgliederbreich
     if(response.status == 200){
+        let res = await response.json();
+        console.log(res);
+
         window.location = "Mitgliederbereich.html";
     }
     //Bei 404 Anzeige der Fehler Meldung
     if(response.status == 404){
         userNotFound.classList.remove("d-none");
+    }
+
+    //Bei 500 Anzeige der Fehler Meldung
+    if(response.status == 500){
+        serverError.classList.remove("d-none");
     }
 }
 
