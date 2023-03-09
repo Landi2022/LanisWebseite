@@ -92,5 +92,24 @@ async function submitContact(discordTag) {
         throw new Error('No valid Discord Tag found!');
     }
 
+    let data = { discordtag: discordTag };
+    let response = await fetch("http://localhost/ajax/contact.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+    });
+
+    console.log(response);
+
+    let res = await response.json();
+    console.log(res);
+
+    if(response.status == 200) {
+        
+    }
+    
+
     console.log(discordTag);
 }

@@ -1,0 +1,17 @@
+{
+    "name": "lani/laniswebseite",
+    "require": {
+        "phpmailer/phpmailer": "6.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lani\\Laniswebseite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lani",
+            "email": "lani.schlagheck@gmail.com"
+        }
+    ]
+}
