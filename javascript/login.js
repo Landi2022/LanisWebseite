@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", init);
 function init(){
 
@@ -12,21 +11,13 @@ function init(){
             submitLogin(emailInput.value, passwortInput.value);
         });
     }
-
-    //Contact - Page
-    const discordTagInput = document.getElementById("discordTagInput");
-    const contactSubmitButton = document.getElementById("contactSubmitButton");
-
-    if(contactSubmitButton){
-        contactSubmitButton.addEventListener("click", function() {
-            submitContact(discordTagInput.value);
-        });
-    }
 }
 
 
 
 async function submitLogin(username, password){
+
+    //blende die Alerts aus
     let missingEmail = document.getElementById("error-missing-e-mail");
     missingEmail.classList.add("d-none"); 
     
@@ -38,6 +29,7 @@ async function submitLogin(username, password){
 
     let serverError = document.getElementById("serverError");
     serverError.classList.add("d-none");
+
 
 
     if(!username || String(username).length <= 0){
@@ -77,39 +69,4 @@ async function submitLogin(username, password){
     if(response.status == 500){
         serverError.classList.remove("d-none");
     }
-}
-
-function onClickdankeschoen(){
-    console.log("Test");
-    const welcomeModalElement = document.getElementById("welcome");
-    const welcomeModal = bootstrap.Modal.getInstance(welcomeModalElement);
-    welcomeModal.hide();
-}
-
-async function submitContact(discordTag) {
-    let discordTagFinderRegex = /^[A-Za-z0-9]+#[0-9]{4}$/;
-    if(discordTag.match(discordTagFinderRegex) == null) {
-        throw new Error('No valid Discord Tag found!');
-    }
-
-    let data = { discordtag: discordTag };
-    let response = await fetch("http://localhost/ajax/contact.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data)
-    });
-
-    console.log(response);
-
-    let res = await response.json();
-    console.log(res);
-
-    if(response.status == 200) {
-        
-    }
-    
-
-    console.log(discordTag);
 }

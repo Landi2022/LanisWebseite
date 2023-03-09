@@ -46,9 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($values['discordtag'])) {
         if(!$mail->send()) {
             echo json_encode($mail->ErrorInfo);
             http_response_code(502);
+        }else {
+            echo json_encode("E-Mail wurde versendet");
+            http_response_code(200);
         }
-
-        echo json_encode("E-Mail wurde versendet");
     } catch (Exception $e) {
         echo json_encode($e->getMessage());
         http_response_code(501);
