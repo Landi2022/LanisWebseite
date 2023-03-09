@@ -1,0 +1,23 @@
+login
+Registrierung, Email und Passwort.|°
+Öffentliche inhalts seiten.(Stream schauen mit Chat, Partner, Mein Setup, Generell Social media links)|°
+Private inhalts seiten(registrierte nutzer, Private videos, Stream plan, Man kann mit mir zocken auf anfrage).|°
+
+
+
+
+div class="flex-container">
+                        <div class="stream-flex-item">
+                            <div class="stream-container">
+                                <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/94rzM9z1_Yk" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                 allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="chat-flex-item">
+                            <div class="chat-container">
+                                <iframe id="innerFrame" name="innerFrame" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads" frameborder="0" allowfullscreen="" src="https://streamelements.com/overlay/63ea641966b94defd4c033d2/cdMf88djJUPh-Fpp4uhWavLNgMMgPTGweAM8Ri51Dc7L33Ug" style="overflow: auto;">
+                                </iframe>
+                            </div>
+                        </div>
+                     </div>

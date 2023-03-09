@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+        <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <script language="javascript" type="text/javascript" src="main.js"></script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+        <link rel="icon" type="image/x-icon" href="assets/Bilder/image.png">
+    </head>
+    <body class="text-center">
+        <div class="container container-center">
+            <div class="row">
+                <div class="col text-center">
+                    <img class="mb-4" src="https://yt3.googleusercontent.com/GpmfjzS3cVjnw67bQBBA-lsV7u6VjCJT8-cep-BQXiy6t87KZNrEnGVMMHtYol6CUHDmllWMZw=s176-c-k-c0x00ffffff-no-rj">
+                    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-5 col-xl-3">
+                    <div id="error-user-not-found" class="alert alert-danger d-none" role="alert">
+                        Der E-Mail Passwort kombination wurde nicht gefunden
+                    </div>
+
+                    <div id="error-missing-e-mail" class="alert alert-danger d-none" role="alert">
+                        Bitte geben sie ihre E-Mail adresse ein
+                    </div>
+
+                    <div id="error-missing-password" class="alert alert-danger d-none" role="alert">
+                        Bitte geben sie ihr Passwort ein
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-5 col-xl-3">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                        <label for="emailInput">Email adresse</label>
+                      </div>
+
+                      <div class="form-floating">
+                        <input type="passwort" class="form-control" id="passwortInput" placeholder="Passwort">
+                        <label for="passwortInput">Passwort</label>
+                      </div>
+                      <div class="checkbox mb-3">
+                        <a href="registrierung.html">Konto Erstellen</a>
+                      </div>
+                      <button id="loginSubmitButton" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

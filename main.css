@@ -1,0 +1,94 @@
+.navigationbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .navigationbar li{
+    float: left;
+  }
+  
+  .navigationbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navigationbar li a:hover {
+    background-color: #111;
+  }
+
+  .yt-logo {
+    width: 80px;
+  
+  }
+
+  .yt-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .schloss-img {
+    width: 130px;
+  
+  }
+
+  .schloss-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .gaming {
+    width: 80px;
+  
+  }
+
+  .gaming img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .welcome-title{
+    font-weight: 700;
+  }
+
+  .flex-container{
+    display: flex;
+    min-height: 360px;
+  }
+
+  .stream-flex-item{
+    flex: 0.7;
+  }
+  .stream-container iframe{
+    margin: 10vh auto;
+    display:block;
+  }
+
+  .chat-flex-item{
+    flex: 0.3;
+  }
+  .chat-container iframe{
+    margin: 10vh auto;
+    display: block;
+    height: 80vh;
+  }
+
+.container-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .title-partner {
+    margin-top: 13vh;
+    margin-bottom: 17vh;
+}

@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+        <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" href="main.css">
+        <script language="javascript" type="text/javascript" src="main.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mitgliederbereich</title>
+        <link rel="icon" type="image/x-icon" href="assets/Bilder/image.png">
+    </head>
+    <body>
+        <!-- Navigation bar-->
+        <ul class="navigationbar">
+            <li><a href="Mitgliederbereich.html">Home</a></li>
+            <li><a href="Streamplan.html">Streamplan</a></li>
+            <li><a href="Mit mir zocken anfrage.html">Mit mir Zocken</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#welcome">
+        Launch demo modal
+        </button>
+
+        
+        <div id="welcome" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h2 class="modal-title welcome-title">Willkommen</h2>
+                        <ul class="d-grid gap-4 my-5 list-unstyled">
+                            <li class="d-flex gap-4">
+                              <div class="yt-logo">
+                                <img class="bi text-muted flex-shrink-0" src="assets/Bilder/yt_icon_rgb.png">
+                              </div>  
+                              <div>
+                                <h5 class="mb-0">YouTube</h5>
+                                Vielen Dank das du mich<br>auf YouTube Abonniert hast.
+                              </div>
+                            </li>
+                            <li class="d-flex gap-4">
+                              <div class="schloss-img">
+                                <img class="flex-shrink-0" src="assets/Bilder/icons8-touch-id-80.png">
+                              </div>
+                              <div>
+                                <h5 class="mb-0">Privat</h5>
+                                Hier kannst du Private Videos von mir sehen<br>wie Fails und Co.
+                              </div>
+                            </li>
+                            <li class="d-flex gap-4">
+                              <div class="gaming">
+                                <img class="flex-shrink-0" src="assets/Bilder/icons8-xbox-controller-80.png">
+                              </div>
+                              <div>
+                                <h5 class="mb-0">Zocken</h5>
+                                Du willst mit mir<br>zocken ? Dann kannst du mir<br>deine Discord daten senden<br>und wir werden bald<br>zusammen<br>spielen.
+                              </div>
+                            </li>
+                          </ul>
+                        <div class="col-sm-12 col-md-12 col-xl-12 text-center">
+                          <button type="submit" class="btn btn-primary" onclick="onClickdankeschoen()">Dankeschön</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-center">
+          <div class="row justify-content-center text-center">
+            <div class="col my-5">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0w8KqcH5qNo?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div> 
+            <div class="col my-5">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ugXFgHSeMzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>  
+            <div class="col my-5">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PAynHT-S3AI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>  
+            <div class="col my-5">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ga8GcQDPVKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>         
+          </div>
+        </div>
+    </body>
+</html>
