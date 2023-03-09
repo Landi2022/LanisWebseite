@@ -38,7 +38,6 @@ async function submitContact(discordTag) {
         throw new Error('No valid Discord Tag found!');
     }
 
-
     //ajax
     let data = { discordtag: discordTag };
     let response = await fetch("http://localhost/ajax/contact.php", {
@@ -69,6 +68,10 @@ async function submitContact(discordTag) {
     
     if(response.status == 500) {
         emailError.classList.remove("d-none");
+    }
+
+    if(response.status == 401){
+        window.location = "login.html";
     }
     
 

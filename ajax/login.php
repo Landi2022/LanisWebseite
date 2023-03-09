@@ -1,5 +1,10 @@
 <?php
 
+//session starten
+session_start([
+    "cookie_lifetime" => 86400,
+]);
+
 $json = file_get_contents('php://input');
 $values = json_decode($json, true);
 
@@ -36,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($values['username']) && isset
     if($user != null){
         //Ergebniss senden
         header('Content-Type: application/json; charset=utf-8');
+        $_SESSION['angemeldet'] = true;
         echo json_encode($user);
     } else {
         http_response_code(404);
