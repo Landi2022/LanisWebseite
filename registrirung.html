@@ -1,0 +1,69 @@
+<html lang="de">
+    <head>
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+        <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="javascript/cookies.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <script language="javascript" type="text/javascript" src="javascript/login.js"></script>
+
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registrirung</title>
+        <link rel="icon" type="image/x-icon" href="assets/Bilder/image.png">
+
+        <script src="https://cdn.websitepolicies.io/lib/cconsent/cconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcb.init({"border":"thin","corners":"small","colors":{"popup":{"background":"#f6f6f6","text":"#000000","border":"#555555"},"button":{"background":"#555555","text":"#ffffff"}},"position":"bottom-right","content":{"message":"Diese Webseite benutzt Cookies die zwingend erforderlich sind für den gernrauch der Webseite","button":"OK!","link":"Lerne mehr"}})});</script>
+
+    </head>
+    <body class="text-center">
+        <div class="container container-center">
+            <div class="row">
+                <div class="col text-center">
+                    <img class="mb-4" src="https://yt3.googleusercontent.com/GpmfjzS3cVjnw67bQBBA-lsV7u6VjCJT8-cep-BQXiy6t87KZNrEnGVMMHtYol6CUHDmllWMZw=s176-c-k-c0x00ffffff-no-rj">
+                    <h1 class="h3 mb-3 fw-normal">Please register</h1>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-5 col-xl-3">
+                    <div id="error-user-not-found" class="alert alert-danger d-none" role="alert">
+                        The e-mail password combination was not found
+                    </div>
+
+                    <div id="error-missing-e-mail" class="alert alert-danger d-none" role="alert">
+                        Please enter your e-mail address
+                    </div>
+
+                    <div id="error-missing-password" class="alert alert-danger d-none" role="alert">
+                        Please enter your password
+                    </div>
+
+                    <div id="serverError" class="alert alert-danger d-none" role="alert">
+                        The server could not connect.
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-5 col-xl-3">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                        <label for="emailInput">Email Address</label>
+                      </div>
+
+                      <div class="form-floating">
+                        <input type="passwort" class="form-control" id="passwortInput" placeholder="Passwort">
+                        <label for="passwortInput">Password</label>
+                      </div>
+
+                      <div class="form-floating">
+                        <input type="passwort" class="form-control" id="passwortInput" placeholder="Passwort">
+                        <label for="passwortInput">Please repeat password</label>
+                      </div>
+                      <button id="loginSubmitButton" class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
