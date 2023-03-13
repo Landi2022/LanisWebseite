@@ -13,16 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($values['username']) && isset
     $name = $values['username'];
     $passwort = $values['password'];
     //Überprüfen pw && nutzername vorhanden
-
-    //Datenbank check nutzer mit pw && nutzername
     //Verbindungsfehler
     $user = null;
     try {
         $dbh = new PDO('mysql:host=localhost:3306;dbname=lani_webseite', "lani_webseite", "Lani_webseite2023#");
 
-        $sql = "SELECT id, email, passwort FROM lani_webseite.user WHERE email LIKE :name AND passwort LIKE :passwort LIMIT 1";
+        $sql = "SELECT id, email, passwort, rolle FROM lani_webseite.user WHERE email LIKE :name LIMIT 1";
         $sth = $dbh->prepare($sql);
-        $sth->execute(['name' => $name, 'passwort' => $passwort]);
+        $sth->execute(['name' => $name]);
 
         //' OR 1 = 1 LIMIT 1 #'
 
@@ -39,10 +37,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($values['username']) && isset
     //Fall 1: ist vorhanden
     //Fall 2: nicht vorhanden
     if($user != null){
-        //Ergebniss senden
-        header('Content-Type: application/json; charset=utf-8');
-        $_SESSION['angemeldet'] = true;
-        echo json_encode($user);
+        if(password_verify($passwort, $user['passwort']) === true){
+          //Ergebniss senden
+            header('Content-Type: application/json; charset=utf-8');
+            $_SESSION['angemeldet'] = true;
+            $_SESSION['rolle'] = $user["rolle"];
+            echo json_encode($user);  
+        } else {
+            http_response_code(404);
+        }
+        
     } else {
         http_response_code(404);
     }
